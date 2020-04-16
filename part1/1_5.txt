@@ -1,0 +1,5 @@
+docker exec -i 9d419  sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+
+alternative solution:
+docker run --rm -i -t ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
