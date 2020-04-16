@@ -1,1 +1,2 @@
+docker tag 66b5 docker-clock
 docker run docker-clock
