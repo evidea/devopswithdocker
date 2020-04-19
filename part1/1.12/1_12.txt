@@ -1,0 +1,7 @@
+sudo docker build -t docker-exposebackend2 .
+cd frontend
+sudo docker build -t docker-exposefront2 .
+
+sudo docker run -d -p 8000:5000 docker-exposefront2
+
+sudo docker run -d -v $PWD/logs.txt:/mydir/backend-example-docker/logs.txt -p 5000:8000 docker-exposebackend2
